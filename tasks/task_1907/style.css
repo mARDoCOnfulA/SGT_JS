@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: beige;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 15px;
+  margin: 5px;
+  text-decoration: none;
+  border: 0.5px solid blue;
+}
+
+.sidebar a:hover {
+  background-color: darkkhaki;
+  color: white;
+}
+
+.sidebar a:active {
+  background-color: magenta;
+  color: white;
+}
+
+div.content {
+  max-width: auto;
+  margin-left: 150px;
+  padding: 1px 16px;
+}
+
+iframe {
+  width: 100%;
+  height: 90vh; /* I tried also 90% but it didn't work the same, can you please tell why? */
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  div.content {
+    box-sizing: border-box;
+    margin-left: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
